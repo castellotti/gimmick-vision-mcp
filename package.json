@@ -1,0 +1,35 @@
+{
+  "name": "gimmick-vision-mcp",
+  "version": "1.0.0",
+  "description": "MCP server bridging Claude Code to any OpenAI-compatible local vision model (e.g. Qwen2.5-VL via llama.cpp)",
+  "type": "module",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vision",
+    "multimodal",
+    "llama.cpp",
+    "qwen",
+    "ocr",
+    "claude",
+    "claude-code"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castellotti/gimmick-vision-mcp"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.2",
+    "axios": "^1.7.9",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "typescript": "^5.3.3"
+  }
+}
