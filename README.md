@@ -26,7 +26,7 @@ Claude Code (especially when running against a local LLM like Qwen3-Coder-Next) 
 docker run --rm -i \
   -e VISION_API_BASE=http://host.docker.internal:8081/v1 \
   -e VISION_MODEL=qwen2.5-vl-7b \
-  gimmick-vision-mcp:latest
+  ghcr.io/castellotti/gimmick-vision-mcp:latest
 ```
 
 Add to your `.mcp.json`:
@@ -40,19 +40,27 @@ Add to your `.mcp.json`:
         "run", "--rm", "-i",
         "-e", "VISION_API_BASE=http://host.docker.internal:8081/v1",
         "-e", "VISION_MODEL=qwen2.5-vl-7b",
-        "gimmick-vision-mcp:latest"
+        "ghcr.io/castellotti/gimmick-vision-mcp:latest"
       ]
     }
   }
 }
 ```
 
-## Building the Docker image
+## Docker image
+
+The image is published to the GitHub Container Registry on every push to `main` and on version tags:
+
+```bash
+docker pull ghcr.io/castellotti/gimmick-vision-mcp:latest
+```
+
+## Building from source
 
 ```bash
 git clone https://github.com/castellotti/gimmick-vision-mcp
 cd gimmick-vision-mcp
-docker build -t gimmick-vision-mcp:latest .
+docker build -t ghcr.io/castellotti/gimmick-vision-mcp:latest .
 ```
 
 ## Building locally
