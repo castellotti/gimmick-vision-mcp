@@ -4,6 +4,10 @@ An MCP server that bridges Claude Code and other agents to any local OpenAI-comp
 
 Pass an image URL and a prompt — gimmick-vision forwards the request to your local vision server and returns the text response. Works with any model served via an OpenAI-compatible API (llama.cpp, Ollama, vLLM, etc.).
 
+![gimmick-vision-mcp demo](images/demo-vision.png)
+
+![gimmick-search-mcp + gimmick-vision-mcp](images/shared.png)
+
 ## Why this exists
 
 Claude Code (especially when running against a local LLM like Qwen3-Coder-Next) has no built-in vision capability. `gimmick-vision` adds three image analysis tools to the MCP toolset, routing vision requests to a separate local model — for example Qwen2.5-VL-7B — without any cloud API calls.
